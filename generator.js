@@ -5,9 +5,9 @@ function generate(){
   fr.onload = function (){
     var im = new Image();
     im.onload = function (){
-      im.src = fr.result;
       ctx.drawImage(im);
     }
+    im.src = fr.result;
   }
 }
 
