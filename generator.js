@@ -5,7 +5,7 @@ function generate(){
     var im = new Image();
     im.onload = function (){
       window.canvas = document.getElementById("drawing");
-      canvas.height = this.height/2*3;
+      canvas.height = this.height/5*9;
       canvas.width = this.width;
       window.ctx = canvas.getContext("2d");
       ctx.fillStyle="white";
