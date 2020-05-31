@@ -3,9 +3,9 @@ function generate(){
   var fr = new FileReader();
   fr.readAsDataURL(document.getElementsByTagName('input')[0].files[0]);
   fr.onload = function (){
-    document.getElementById("imag").src = fr.result;
-    var img = document.getElementById("imag");
-    ctx.drawImage(img);
+    var im = new Image();
+    im.src = fr.result;
+    ctx.drawImage(im);
   }
 }
 
