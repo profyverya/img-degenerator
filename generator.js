@@ -12,7 +12,7 @@ function generate(){
       var text = document.getElementById("txt").value.split("\n");
       ctx.font = "bold 30pt Arial";
       for (var i = 0; i < text.length; i++){
-        wrapText(ctx, text[i], 50, 170/text.length*i, 1000, 34);
+        wrapText(ctx, text[i], 50, 170/text.length*(i+1), 1000, 34);
       }
       
     }
