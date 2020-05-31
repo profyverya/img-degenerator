@@ -5,8 +5,8 @@ function generate(){
     var im = new Image();
     im.onload = function (){
       window.canvas = document.getElementById("drawing");
-      canvas.height = 1080;
-      canvas.width = 1080;
+      canvas.height = this.height/2*3;
+      canvas.width = this.width;
       ctx = canvas.getContext("2d");
       ctx.fillStyle="white";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -15,6 +15,7 @@ function generate(){
       ctx.font = "bold 50pt Arial";
       ctx.fillStyle="black";
       for (var i = 0; i < text.length; i++){
+        if (i==2)
         wrapText(ctx, text[i], 50, 170/text.length*(i+1), 1000, 34);
       }
       download(canvas, 'meme.png');
