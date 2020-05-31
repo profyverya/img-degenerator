@@ -1,5 +1,9 @@
 function generate(){
   window.ctx = document.getElementById("drawing").getContext("2d");
-  window.img = new Image();
+  var fr = new FileReader();
+  fr.readAsDataURL(document.getElementsByTagName('input')[0].files[0]);
+  fr.onload = function (){
+    document.getElementById("imag").src = fr.result;
+  }
 }
 
