@@ -1,10 +1,13 @@
 function generate(){
-  window.ctx = document.getElementById("drawing").getContext("2d");
   var fr = new FileReader();
   fr.readAsDataURL(document.getElementsByTagName('input')[0].files[0]);
   fr.onload = function (){
     var im = new Image();
     im.onload = function (){
+      window.canvas = document.getElementById("drawing");
+      canvas.height = 1080;
+      canvas.width = 1080;
+      ctx = canvas.getContext("2d");
       ctx.drawImage(im, 0, 0);
     }
     im.src = fr.result;
