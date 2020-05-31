@@ -12,11 +12,12 @@ function generate(){
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(im, 0, canvas.height - this.height, this.width, this.height);
       var text = document.getElementById("txt").value.split("\n");
-      ctx.font = "bold 50pt Arial";
+      var fontSize = parseInt(canvas.width/20);
+      ctx.font = "bold "+fontSize+"pt Arial";
       ctx.fillStyle="black";
       for (var i = 0; i < text.length; i++){
         if (i==2)
-        wrapText(ctx, text[i], 50, 170/text.length*(i+1), 1000, 34);
+        wrapText(ctx, text[i], canvas.width*0.05, (canvas.height/9*4) - fontSize * (text.length - (i - 1)), canvas.width*0.90, fontSize);
       }
       download(canvas, 'meme.png');
     }
