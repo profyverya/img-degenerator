@@ -7,7 +7,7 @@ function generate(){
       window.canvas = document.getElementById("drawing");
       canvas.height = this.height/2*3;
       canvas.width = this.width;
-      ctx = canvas.getContext("2d");
+      window.ctx = canvas.getContext("2d");
       ctx.fillStyle="white";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(im, 0, 270, 1080, 810);
