@@ -1,5 +1,5 @@
 function generate(){
-  var ctx = document.getElementById("drawing").getContext("2d");
-  var img = new Image();
+  window.ctx = document.getElementById("drawing").getContext("2d");
+  window.img = new Image();
 }
 
