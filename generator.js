@@ -9,9 +9,12 @@ function generate(){
       canvas.width = 1080;
       ctx = canvas.getContext("2d");
       ctx.drawImage(im, 0, 270, 1080, 810);
-      var text = document.getElementById("txt").value;
+      var text = document.getElementById("txt").value.split("\n");
       ctx.font = "bold 30pt Arial";
-      wrapText(ctx, text, 50, 50, 1000, 34);
+      for (var i = 0; i < text.length; i++){
+        wrapText(ctx, text, 50, 50 + 34*i, 1000, 34);
+      }
+      
     }
     im.src = fr.result;
   }
