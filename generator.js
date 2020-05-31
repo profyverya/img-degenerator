@@ -4,8 +4,10 @@ function generate(){
   fr.readAsDataURL(document.getElementsByTagName('input')[0].files[0]);
   fr.onload = function (){
     var im = new Image();
-    im.src = fr.result;
-    ctx.drawImage(im);
+    im.onload = function (){
+      im.src = fr.result;
+      ctx.drawImage(im);
+    }
   }
 }
 
