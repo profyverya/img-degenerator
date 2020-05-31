@@ -16,7 +16,6 @@ function generate(){
       ctx.font = "bold "+fontSize+"pt Arial";
       ctx.fillStyle="black";
       for (var i = 0; i < text.length; i++){
-        if (i==2)
         wrapText(ctx, text[i], canvas.width*0.05, (canvas.height/9*4) - fontSize * (text.length - (i - 1)), canvas.width*0.90, fontSize);
       }
       download(canvas, 'meme.png');
