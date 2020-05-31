@@ -4,6 +4,8 @@ function generate(){
   fr.readAsDataURL(document.getElementsByTagName('input')[0].files[0]);
   fr.onload = function (){
     document.getElementById("imag").src = fr.result;
+    var img = document.getElementById("imag");
+    ctx.drawImage(img);
   }
 }
 
