@@ -9,7 +9,7 @@ function generate(){
       canvas.width = 1080;
       ctx = canvas.getContext("2d");
       ctx.drawImage(im, 0, 270, 1080, 810);
-      var text = documet.getElementById("txt").value;
+      var text = document.getElementById("txt").value;
       ctx.font = "bold 30pt Arial";
       ctx.fillText(text, 20, 50);
     }
