@@ -8,7 +8,7 @@ function generate(){
       canvas.height = 1080;
       canvas.width = 1080;
       ctx = canvas.getContext("2d");
-      ctx.drawImage(im, 0, 270, 810, 1080);
+      ctx.drawImage(im, 0, 270, 1080, 810);
     }
     im.src = fr.result;
   }
