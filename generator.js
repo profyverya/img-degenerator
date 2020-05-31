@@ -5,7 +5,7 @@ function generate(){
   fr.onload = function (){
     var im = new Image();
     im.onload = function (){
-      ctx.drawImage(im);
+      ctx.drawImage(im, 0, 0);
     }
     im.src = fr.result;
   }
