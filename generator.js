@@ -19,7 +19,7 @@ function generate(){
       for (var i = 0; i < text.length; i++){
         wrapText(ctx, text[i], canvas.width*0.05, (canvas.height/9*4) - lineHeight * (text.length - (i - 1)), canvas.width*0.90, lineHeight);
       }
-      download(canvas, 'meme.png');
+      download(canvas);
     }
     im.src = fr.result;
   }
