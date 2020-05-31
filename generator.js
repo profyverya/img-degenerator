@@ -10,7 +10,7 @@ function generate(){
       window.ctx = canvas.getContext("2d");
       ctx.fillStyle="white";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(im, 0, 270, 1080, 810);
+      ctx.drawImage(im, 0, canvas.height - this.height, this.height, this.width);
       var text = document.getElementById("txt").value.split("\n");
       ctx.font = "bold 50pt Arial";
       ctx.fillStyle="black";
