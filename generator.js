@@ -8,6 +8,8 @@ function generate(){
       canvas.height = 1080;
       canvas.width = 1080;
       ctx = canvas.getContext("2d");
+      ctx.fillStyle="white";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(im, 0, 270, 1080, 810);
       var text = document.getElementById("txt").value.split("\n");
       ctx.font = "bold 50pt Arial";
